@@ -106,19 +106,19 @@
                         Dasar dan Tupoksi
                       </a>
                       <a
-                        href="pricing.html"
+                        href="{{ url('/tujuan-dan-sasaran') }}"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Tujuan dan Sasaran
                       </a>
                       <a
-                        href="contact.html"
+                        href="{{ url('/struktur-organisasi') }}"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Struktur Organisasi
                       </a>
                       <a
-                        href="blog-grids.html"
+                        href="{{ url('/visi-dan-misi') }} "
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Visi dan Misi

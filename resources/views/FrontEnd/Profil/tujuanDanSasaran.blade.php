@@ -1,5 +1,5 @@
 @extends('FrontEnd.main')
-@section('judul','PBJ | Profil - Dasar dan Tupoksi')
+@section('judul','PBJ | Profil - Tujuan dan Sasaran')
 @section('isi')
     <!-- ====== Banner Section Start -->
   <div class="relative bg-primary z-10 overflow-hidden pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px] dark:bg-dark">
@@ -14,7 +14,7 @@
                 Bagian Pengadaan Barang dan Jasa SETDA - KLU
               </p>
             <h1 class="mb-4 text-3xl font-bold text-white dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Dasar Dan Tupoksi</h1>
+              Tujuan dan Sasaran</h1>
 
           </div>
         </div>
@@ -33,31 +33,21 @@
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full px-4 lg:w-1/2">
             <div class="mb-12 max-w-[540px] lg:mb-0">
-              <h2
-                class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"
-              >
-                DASAR
-              </h2>
+
               <p
                 class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6"
               >
-              PERATURAN GUBERNUR NUSA TENGGARA BARAT NOMOR 10 TAHUN 2023 TENTANG KEDUDUKAN,
-              SUSUNAN ORGANISASI, TUGAS DAN FUNGSI SERTA TATA KERJA SEKRETARIAT DAERAH PROVINSI NUSA TENGGARA BARAT
-                <br />
+                <Span class="bold">Tujuan</Span>
+              </h2> merupakan penjabaran/implementasi dari pernyataan misi. Tujuan adalah pernyataan-pernyataan tentang hal-hal yang perlu dilakukan untuk mencapai visi, melaksanakan misi dengan menjawab isu strategis daerah dan permasalahan pembangunan daerah. Sedangkan sasaran adalah penjabaran dari tujuan, merupakan hasil yang diharapkan dari suatu tujuan yang diformulasikan secara terukur, spesifik, mudah dicapai, rasional, untuk dapat dilaksanakan dalam jangka waktu 5 (lima) tahun ke depan.
+
+              Misi yang berkaitan dengan Tugas dan fungsi Biro Pengadaan Barang dan Jasa  Setda Provinsi Nusa Tenggara Barat sebagai Organisasi Perangkat Daerah adalah misi ke 2 yaitu NTB BERSIH DAN MELAYANI melalui transformasi birokrasi yang berintegritas, berkinerja tinggi, bersih dari KKN dan berdedikasi.
+
+              Berdasarkan permasalahan, tantangan dan potensi Biro Pengadaan Barang dan Jasa  sebagai organisasi perangkat daerah yang memiliki tugas merumuskan bahan/materi  kebijakan, koordinasi strategis, pembinaan dan pengawasan di bidang Pengadaan Barang dan Jasa, Pengelolaan Layanan Pengadaan Secara Elektronik, Pembinaan dan Advokasi Pengadaan Barang dan Jasa, maka dalam rangka mencapai visi dan misi pemerintah Provinsi NTB dirumuskanlah tujuan dari Biro Pengadaan Barang dan Jasa  yaitu : Terwujudnya kualitas Pelayanan Kepada Masyarakat bidang pengadaan barang dan jasa
+
+              Tujuan tersebut mengandung pengertian bahwa segenap jajaran Biro Pengadaan Barang dan Jasa berkomitmen untuk melaksanaan pengelolaan pengadaan barang dan jasa serta memberikan pelayanan yang baik dalam proses pengadaan barang dan jasa yang efektif, efisien, jujur dan akuntabel sebagai upaya membangun NTB yang Gemilang.
+
+              Dalam rangka mewujudkan tujuan tersebut sehingga terbentuk keselarasan antara program dan kegiatan, maka ditetapkan sasaran Biro Pengadaan Barang dan Jasa sbb : Meningkatnya layanan pengadaan yang transparan, efektif, efisien dan akuntabel
               </p>
-              <h2
-                class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"
-              >
-                TUPOKSI
-              </h2>
-              <embed src="{{ asset('Data/PDF/tes.pdf') }}" type="application/pdf" width="100%" height="400px" />
-              <br>
-              <a
-                  href="{{ url('/Data/PDF/tes.pdf') }}"
-                  class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark"
-                >
-                  Full
-                </a>
             </div>
           </div>
 

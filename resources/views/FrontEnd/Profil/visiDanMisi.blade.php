@@ -1,5 +1,5 @@
 @extends('FrontEnd.main')
-@section('judul','PBJ | Profil - Dasar dan Tupoksi')
+@section('judul','PBJ | Profil - Visi Dan Misi')
 @section('isi')
     <!-- ====== Banner Section Start -->
   <div class="relative bg-primary z-10 overflow-hidden pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px] dark:bg-dark">
@@ -14,7 +14,7 @@
                 Bagian Pengadaan Barang dan Jasa SETDA - KLU
               </p>
             <h1 class="mb-4 text-3xl font-bold text-white dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Dasar Dan Tupoksi</h1>
+              Visi dan Misi</h1>
 
           </div>
         </div>
@@ -36,28 +36,25 @@
               <h2
                 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"
               >
-                DASAR
+                Visi
               </h2>
               <p
                 class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6"
               >
-              PERATURAN GUBERNUR NUSA TENGGARA BARAT NOMOR 10 TAHUN 2023 TENTANG KEDUDUKAN,
-              SUSUNAN ORGANISASI, TUGAS DAN FUNGSI SERTA TATA KERJA SEKRETARIAT DAERAH PROVINSI NUSA TENGGARA BARAT
+              Terwujudnya Pengadaan Barang/Jasa yang transparan, akuntabel dan kredibel
                 <br />
               </p>
               <h2
                 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"
               >
-                TUPOKSI
+                MISI
               </h2>
-              <embed src="{{ asset('Data/PDF/tes.pdf') }}" type="application/pdf" width="100%" height="400px" />
-              <br>
-              <a
-                  href="{{ url('/Data/PDF/tes.pdf') }}"
-                  class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark"
-                >
-                  Full
-                </a>
+              <p
+                class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6"
+              >
+              Melaksanakan proses pengadaan barang/jasa pemerintah yang efesien, efektif, transparan, keterbukaan, bersaing, adil/tidak diskriminatif dan akuntabel untuk mewujudkan tata kelola pemerintahan yang baik dan bersih serta meningkatkan persaingan usaha yang sehat dalam layanan pengadaan barang/jasa pemerintah bagi masyarakat.
+                <br />
+              </p>
             </div>
           </div>
 
