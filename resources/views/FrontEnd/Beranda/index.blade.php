@@ -23,33 +23,7 @@
               >
                 Salam Pengadaan!.
               </p>
-              <ul
-                class="mb-10 flex flex-wrap items-center justify-center gap-5"
-              >
-                <li>
-                  <a
-                    href="#"
-                    class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color"
-                  >
-                    Selengkapnya
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark"
-                  >
-                    <svg  class="fill-current"
-                    width="40"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    fill="#000000" viewBox="0 -2.75 29.5 29.5" id="_11_-_Massage" data-name="11 - Massage" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="_11_-_Massage-2" data-name="11 - Massage" d="M30.75,9.041A3.04,3.04,0,0,0,27.709,6H4.291A3.04,3.04,0,0,0,1.25,9.041V21.459A3.04,3.04,0,0,0,4.291,24.5h19.12a1.026,1.026,0,0,1,.725.3l4.907,4.907A1,1,0,0,0,30.75,29V9.041Zm-2,0V26.586l-3.2-3.2a3.024,3.024,0,0,0-2.139-.886H4.291A1.041,1.041,0,0,1,3.25,21.459V9.041A1.041,1.041,0,0,1,4.291,8H27.709A1.041,1.041,0,0,1,28.75,9.041Z" transform="translate(-1.25 -6)" fill-rule="evenodd"></path> </g></svg>
-                    Hubungi Kami
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
 
