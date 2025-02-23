@@ -27,11 +27,10 @@
           <div
             class="wow fadeInUp relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-14 px-8 text-center sm:px-12 md:px-[60px]"
             data-wow-delay=".15s">
-            <div class="mb-10 text-center">
-              <a href="javascript:void(0)" class="mx-auto inline-block max-w-[160px]">
-                <img src="template/assets/images/logo/logo.svg" alt="logo" class="dark:hidden" />
-                <img src="template/assets/images/logo/logo-white.svg" alt="logo" class="hidden dark:block" />
-              </a>
+            <div class="mb-10 text-center mx-auto inline-block ">
+                <img src="template/assets/images/logo/logo-login.svg" alt="logo" class="dark:hidden" />
+                <img src="template/assets/images/logo/logo-login-white.svg" alt="logo" class="hidden dark:block" />
+
             </div>
             <x-auth-session-status class="mb-4" :status="session('status')" />
             <form method="POST" action="{{ route('login') }}">
