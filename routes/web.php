@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\BrandaController;
+use App\Http\Controllers\DashboardBerandaControllerController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublikasiController;
@@ -43,9 +44,14 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    // profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Beranda
+    // hero
+    Route::get('/dashboard-hero',[DashboardBerandaControllerController::class, 'hero'])->name('hero');
 });
 
 require __DIR__.'/auth.php';
