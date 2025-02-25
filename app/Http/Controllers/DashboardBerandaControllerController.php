@@ -77,4 +77,9 @@ class DashboardBerandaControllerController extends Controller
         return redirect()->route('hero')->with('success', 'Data berhasil diperbarui!');
     }
 
+    // informasi
+    public function informasi()
+    {
+        return view('BackEnd.Beranda.informasi');
+    }
 }

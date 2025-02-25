@@ -1,12 +1,12 @@
 @extends('BackEnd.main')
-@section('judul','PBJ | Beranda - Hero')
+@section('judul','PBJ | Beranda - Informasi')
 @section('isi')
 <!-- Content wrapper -->
 <div class="content-wrapper">
   <!-- Content -->
 
   <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Beranda /</span> Hero</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Beranda /</span> Informasi</h4>
     <!-- Basic Layout -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible" role="alert">
