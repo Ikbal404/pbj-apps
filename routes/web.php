@@ -52,6 +52,8 @@ Route::middleware('auth')->group(function () {
     // Beranda
     // hero
     Route::get('/dashboard-hero',[DashboardBerandaControllerController::class, 'hero'])->name('hero');
+    Route::post('/dashboard-hero',[DashboardBerandaControllerController::class, 'heroStore'])->name('hero.store');
+    Route::put('/dashboard-hero{id}',[DashboardBerandaControllerController::class, 'heroUpdate'])->name('hero.update');
 });
 
 require __DIR__.'/auth.php';

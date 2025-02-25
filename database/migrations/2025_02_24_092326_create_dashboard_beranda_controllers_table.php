@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dashboard_beranda_controllers', function (Blueprint $table) {
+        Schema::create('hero', function (Blueprint $table) {
             $table->id();
+            $table->string('Judul');
+            $table->string('SubJudul');
+            $table->string('Image');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dashboard_beranda_controllers');
+        Schema::dropIfExists('hero');
     }
 };
