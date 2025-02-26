@@ -53,9 +53,11 @@ Route::middleware('auth')->group(function () {
     // hero
     Route::get('/dashboard-hero',[DashboardBerandaControllerController::class, 'hero'])->name('hero');
     Route::post('/dashboard-hero',[DashboardBerandaControllerController::class, 'heroStore'])->name('hero.store');
-    Route::put('/dashboard-hero{id}',[DashboardBerandaControllerController::class, 'heroUpdate'])->name('hero.update');
+    Route::put('/dashboard-hero/{id}',[DashboardBerandaControllerController::class, 'heroUpdate'])->name('hero.update');
     // informasi
     Route::get('/dashboard-informasi',[DashboardBerandaControllerController::class, 'informasi'])->name('informasi');
+    Route::get('/dashboard-informasi-edit-{SubJudul}',[DashboardBerandaControllerController::class, 'informasiEdit'])->name('informasi.edit');
+    Route::post('/dashboard-informasi',[DashboardBerandaControllerController::class, 'informasiStore'])->name('informasi.store');
 });
 
 require __DIR__.'/auth.php';

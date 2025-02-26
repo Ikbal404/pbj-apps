@@ -14,144 +14,128 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    @if($Data)
-        <div class="row">
-            <div class="col-xl">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="{{ asset($Data->Image) }}" alt="Card image cap" />
-                    <div class="card-body">
-                    <h5 class="card-title">{{ $Data->Judul }}</h5>
-                    <p class="card-text">
-                        {{ $Data->SubJudul }}
-                    </p>
-                    <p class="card-text">
-                        <small class="text-muted">Last updated {{ $Data->updated_at->format('d M Y ') }}</small>
-                    </p>
-                    </div>
-                </div>
-                </div>
-            <div class="col-xl">
-            <div class="card mb-4">
-            <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Update Data Hero</h5>
-                <small class="text-muted float-end">Akan di tampilkan di halaman beranda utama</small>
-            </div>
-            <div class="card-body">
-                <form action="{{ route('hero.update', $Data->id) }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                <div class="mb-3">
-                    <label class="form-label" for="basic-icon-default-fullname">Judul</label>
-                    <div class="input-group input-group-merge">
-
-                    <input
-                        name="Judul"
-                        type="text"
-                        value="{{$Data->Judul}}"
-                        class="form-control"
-                        id="basic-icon-default-fullname"
-                        placeholder="Input Judul"
-                        aria-label="Input Judul"
-                        aria-describedby="basic-icon-default-fullname2" required
-                    />
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="basic-icon-default-company">Sub-Judul</label>
-                    <div class="input-group input-group-merge">
-                    <input
-                        type="text"
-                        name="SubJudul"
-                        value="{{$Data->SubJudul}}"
-                        id="basic-icon-default-company"
-                        class="form-control"
-                        placeholder="Input Sub-Judul"
-                        aria-label="Input Sub-Judul"
-                        aria-describedby="basic-icon-default-company2" required
-                    />
-                    </div>
-                </div>
-                <div class="div">
-                <small class="text-muted float-left">Disarankan Ukuran Gambar 1400 X 600 pixel (Max 2000 kb)</small>
-                <div class="input-group mb-3">
-                    <input
-                        type="file"
-                        name="Image"
-                        class="form-control"
-                        id="inputGroupFile04"
-                        aria-describedby="inputGroupFileAddon04"
-                        aria-label="Upload"
-                    />
-                </div>
-            </div>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-                </form>
-            </div>
-            </div>
-            </div>
-            </div>
-    @else
-        <div class="row">
-        <div class="col-xl">
-                <div class="card mb-3">
-                <img class="card-img-top" src="sneat/assets/img/elements/no-image.jpg" alt="Card image cap" />
-                </div>
-        </div>
-        <div class="col-xl">
-        <div class="card mb-4">
-            <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Tambah Data Hero</h5>
-            <small class="text-muted float-end">Akan di tampilkan di halaman beranda utama</small>
-            </div>
-            <div class="card-body">
-                <form action="{{ route('hero.store') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                <div class="mb-3">
-                <label class="form-label" for="basic-icon-default-fullname">Judul</label>
-                <div class="input-group input-group-merge">
-
-                    <input
-                    name="Judul"
-                    type="text"
-                    class="form-control"
-                    id="basic-icon-default-fullname"
-                    placeholder="Input Judul"
-                    aria-label="Input Judul"
-                    aria-describedby="basic-icon-default-fullname2"
-                    />
-                </div>
-                </div>
-                <div class="mb-3">
-                <label class="form-label" for="basic-icon-default-company">Sub-Judul</label>
-                <div class="input-group input-group-merge">
-                    <input
-                    type="text"
-                    name="SubJudul"
-                    id="basic-icon-default-company"
-                    class="form-control"
-                    placeholder="Input Sub-Judul"
-                    aria-label="Input Sub-Judul"
-                    aria-describedby="basic-icon-default-company2"
-                    />
-                </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input
-                    type="file"
-                    name="Image"
-                    class="form-control"
-                    id="inputGroupFile04"
-                    aria-describedby="inputGroupFileAddon04"
-                    aria-label="Upload"
-                    />
-                </div>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </form>
-            </div>
-        </div>
-        </div>
+    @if(session('Judul'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            {{ session('Judul') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+    <div class="card">
+        <div class="py-3 px-3">
+            <button type="button" data-bs-toggle="modal"
+            data-bs-target="#basicModal" class="btn rounded-pill btn-primary">Tambah</button>
+        </div>
+        <div class="table-responsive text-nowrap">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>SubJudul</th>
+                <th>Deskripsi</th>
+                <th>Image</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach ($Data as $key => $item)
+                    <tr>
+                    <td>{{ $key + 1 }}</td>
+                    <td>{{ $item->Judul }}</td>
+                    <td>{{ $item->SubJudul }}</td>
+                    <td>{{ $item->Deskripsi }}</td>
+                    <td>
+                        @if ($item->Image)
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                class="avatar avatar-xs pull-up"
+                                title="Gambar"
+                                >
+                                <img src="{{ asset($item->Image) }}" alt="Avatar" class="rounded-circle" />
+                                </li>
+                            </ul>
+                        @else
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                class="avatar avatar-xs pull-up"
+                                title="No Image"
+                                >
+                                <img src="sneat/assets/img/elements/no-image.jpg" alt="Avatar" class="rounded-circle" />
+                                </li>
+                            </ul>
+                        @endif
+
+                    </td>
+                    <td>
+                    <div class="dropdown">
+                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('informasi.edit', $item->SubJudul) }}"
+                            ><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                        <form action="#" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button class="dropdown-item" type="submit" onclick="return confirm('Yakin ingin menghapus?')"><i class="bx bx-trash me-1"></i>Hapus</button>
+
+                        </form>
+                        </div>
+                    </div>
+                    </td>
+                    </tr>
+                @endforeach
+            </tbody>
+          </table>
+        </div>
+    </div>
+      <!--/ Hoverable Table rows -->
 </div>
 </div>
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel1">Tambah Informasi</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+        <form action="{{ route('informasi.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="row">
+                    <div class="col mb-3">
+                    <label for="nameBasic" class="form-label">Judul</label>
+                    <input type="text" name="Judul" id="nameBasic" class="form-control" placeholder="Enter Judul" />
+                    </div>
+                </div>
+                <div>
+                    <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
+                    <textarea class="form-control" name="Deskripsi" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Pilih Foto</label>
+                    <input class="form-control" name="Image" type="file" id="formFile" />
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
 @endsection
